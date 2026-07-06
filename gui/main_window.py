@@ -28,6 +28,8 @@ class MainWindow(QMainWindow):
 
         self.create_ui()
 
+        self.loader = ThemeLoader()
+
     def create_ui(self):
 
         splitter = QSplitter()
@@ -60,7 +62,11 @@ class MainWindow(QMainWindow):
 
         self.theme_path = folder
 
+        theme = self.loader.load(folder)
+        
         self.tree.load_theme(folder)
+        
+        self.preview.set_theme(theme)
 
     def reload_theme(self):
 
