@@ -8,6 +8,7 @@ from core.theme_model import (
     ThemeModel,
 )
 from core.css import CssParser
+from core.css import CssResolver
 
 IMAGE_SUFFIXES = {
     ".png",
@@ -51,6 +52,8 @@ class ThemeLoader:
             model.css_rules.extend(
                 parser.parse_file(model.css_file)
             )
+        
+            CssResolver().resolve(model)
         
         return model
 
