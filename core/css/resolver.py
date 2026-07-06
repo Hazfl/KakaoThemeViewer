@@ -41,3 +41,4 @@ class CssResolver:
                     continue
 
                 value.relative_path = image.relative_path
+                value.resolved = True
