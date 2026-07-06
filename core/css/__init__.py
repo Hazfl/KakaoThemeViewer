@@ -6,3 +6,4 @@ from .model import (
     CssColorValue,
 )
 from .parser import CssParser
+from .resolver import CssResolver
