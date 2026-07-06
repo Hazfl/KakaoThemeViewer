@@ -43,7 +43,15 @@ class ThemeLoader:
         model.root = root
 
         self._scan(root, model)
-
+        
+        if model.css_file:
+        
+            parser = CssParser()
+        
+            model.css_rules.extend(
+                parser.parse_file(model.css_file)
+            )
+        
         return model
 
     def _scan(
