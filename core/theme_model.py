@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from core.css import CssRule
 from pathlib import Path
 
 
