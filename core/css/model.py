@@ -12,6 +12,7 @@ class CssValue:
 class CssImageValue(CssValue):
     filename: str = ""
     relative_path: str | None = None
+    resolved: bool = False
 
 
 @dataclass(slots=True)
