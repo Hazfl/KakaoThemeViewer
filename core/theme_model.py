@@ -34,17 +34,6 @@ class ThemeImage:
 
 
 @dataclass(slots=True)
-class CssRule:
-    """
-    CSS Rule 하나
-    """
-
-    selector: str
-
-    properties: dict[str, str] = field(default_factory=dict)
-
-
-@dataclass(slots=True)
 class ThemeModel:
     """
     프로젝트 전체에서 사용하는 Theme 객체
