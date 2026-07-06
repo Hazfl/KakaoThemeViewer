@@ -5,3 +5,4 @@ from .model import (
     CssImageValue,
     CssColorValue,
 )
+from .parser import CssParser
