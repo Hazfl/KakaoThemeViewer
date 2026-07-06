@@ -7,7 +7,7 @@ from core.theme_model import (
     ThemeImage,
     ThemeModel,
 )
-
+from core.css import CssParser
 
 IMAGE_SUFFIXES = {
     ".png",
