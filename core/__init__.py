@@ -4,3 +4,4 @@ from .theme_model import (
     ThemeImage,
     CssRule,
 )
+from .theme_loader import ThemeLoader
