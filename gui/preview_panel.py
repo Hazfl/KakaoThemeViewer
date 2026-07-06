@@ -2,7 +2,29 @@ from __future__ import annotations
 
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QColor
-from PySide6.QtWidgets import (
+from PySide6.QtWidgets import from __future__ import annotations
+
+from PySide6.QtWidgets import QVBoxLayout, QWidget
+
+from widgets.chat_preview import ChatPreview
+from core.theme_model import ThemeModel
+
+
+class PreviewPanel(QWidget):
+
+    def __init__(self, parent=None):
+        super().__init__(parent)
+
+        self.preview = ChatPreview()
+
+        layout = QVBoxLayout(self)
+        layout.setContentsMargins(5, 5, 5, 5)
+
+        layout.addWidget(self.preview)
+
+    def set_theme(self, theme: ThemeModel):
+
+        self.preview.set_theme(theme)
     QLabel,
     QFrame,
     QVBoxLayout,
