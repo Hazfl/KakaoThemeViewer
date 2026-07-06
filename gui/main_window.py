@@ -12,6 +12,7 @@ from PySide6.QtCore import Qt
 from gui.theme_tree import ThemeTree
 from gui.preview_panel import PreviewPanel
 from gui.property_panel import PropertyPanel
+from core import ThemeLoader
 
 
 class MainWindow(QMainWindow):
